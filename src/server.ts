@@ -1,14 +1,19 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
+import "reflect-metadata";
 
+
+import { Routes } from './routes/baseRoute';
 
 class App {
 
   public app: express.Application
+  public routeBase: Routes = new Routes();
 
   constructor() {
     this.app = express();
     this.config();
+    this.routeBase.routes(this.app);
   }
 
   private config(): void {
