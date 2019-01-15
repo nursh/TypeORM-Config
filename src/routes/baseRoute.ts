@@ -14,7 +14,6 @@ export class Routes {
 
   private async getDBConnection() {
     this.connection = await getConnection();
-    return this.connection;
   }
 
   public routes(app: Application): void {

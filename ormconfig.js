@@ -1,7 +1,3 @@
-if (process.env.ENTITY_ENV) {
-
-}
-
 module.exports = {
   type: "postgres",
   host: "ec2-107-20-237-78.compute-1.amazonaws.com",
